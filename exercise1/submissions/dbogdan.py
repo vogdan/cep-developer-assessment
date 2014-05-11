@@ -6,8 +6,9 @@
 #
 
 import pandas as pd
+import os
 
-in_file = "../input/xl.csv"
+in_file = os.path.join(os.path.dirname(__file__), "../input/xl.csv")
 mean_file = "mean.csv"
 stats_file = "stats.csv"
 
@@ -30,7 +31,7 @@ def main():
     
     stats = mean.describe()
     stats.to_csv(stats_file)
-    
+
 if __name__ == "__main__":
     main()
 

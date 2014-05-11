@@ -7,8 +7,9 @@
 
 from scipy.stats import percentileofscore
 import pandas as pd
+import os
 
-in_file = "../input/mean.csv"
+in_file = os.path.join(os.path.dirname(__file__),"../input/mean.csv")
 out_file = "pct.csv"
 
 def get_percentile_from_rating(rating_list):
